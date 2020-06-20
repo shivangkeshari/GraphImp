@@ -88,7 +88,81 @@ public class DijkstraMain {
 
         //System.out.println(adc);
 
+        Map<String, Map<String,String>> add = new HashMap<String, Map<String, String>>();
+        Map<String,String> tempd=new HashMap<String, String>();
 
+
+        tempd.clear();
+        tempd.put("I1","Forward");
+        add.put("G1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("R1","Forward");
+        add.put("W1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("I1","Right");
+        add.put("R1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("G1","Backward");
+        tempd.put("R1","Left");
+        tempd.put("C1","Forward");
+        tempd.put("S1","Right");
+        add.put("I1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("I1","Left");
+        tempd.put("S3","Forward");
+        tempd.put("I2","Right");
+        add.put("S1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("S1","Left");
+        tempd.put("G2","Backward");
+        tempd.put("S4","Forward");
+        add.put("I2",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("I2","Forward");
+        add.put("G2",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("C2","Forward");
+        tempd.put("I1","Backward");
+        tempd.put("S2","Right");
+        add.put("C1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("C1","Backward");
+        tempd.put("M1","Right");
+        add.put("C2",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("C1","Left");
+        tempd.put("M1","Forward");
+        tempd.put("S3","Right");
+        add.put("S2",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("S2","Left");
+        tempd.put("M2","Forward");
+        tempd.put("S1","Backward");
+        tempd.put("S4","Right");
+        add.put("S3",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("S3","Left");
+        tempd.put("M3","Forward");
+        tempd.put("I2","Backward");
+        add.put("S4",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("C2","Left");
+        tempd.put("S2","Backward");
+        tempd.put("M2","Right");
+        add.put("M1",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("M1","Left");
+        tempd.put("S3","Backward");
+        tempd.put("M3","Right");
+        add.put("M2",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("M2","Left");
+        tempd.put("S4","Backward");
+        tempd.put("F1","Right");
+        add.put("M3",shortestPath.ConvD(tempd));
+        tempd.clear();
+        tempd.put("M3","Left");
+        add.put("F1",shortestPath.ConvD(tempd));
 
 
         Map<String, List<Double>> pos = new HashMap<String, List<Double>>();
@@ -187,6 +261,19 @@ public class DijkstraMain {
                 Integer vali=(Integer)mapElementi.getValue();
                 allV.get(key).addNeighbour(new Edge(vali, allV.get(key),allV.get(keyi)));
                 allV.get(key).addNeighbourC(keyi,vali);
+            }
+        }
+
+        for (Map.Entry mapElement : add.entrySet()) {
+            String key = (String)mapElement.getKey();
+
+            Map<String,String> val=(Map<String,String>)mapElement.getValue();
+
+            for (Map.Entry mapElementi : val.entrySet()) {
+                String keyi = (String)mapElementi.getKey();
+
+                String vali=(String)mapElementi.getValue();
+                allV.get(key).addNeighbourD(keyi,vali);
             }
         }
 

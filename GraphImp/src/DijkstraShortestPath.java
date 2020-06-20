@@ -8,6 +8,12 @@ public class DijkstraShortestPath {
         return t;
     }
 
+    public Map<String,String> ConvD(Map<String,String> temp){
+        Map<String,String> t=new HashMap<String, String>();
+        t.putAll(temp);
+        return t;
+    }
+
     public List<Double> ConvP(List<Double> temp){
         List<Double> t=new ArrayList<Double>();
         t.addAll(temp);
@@ -77,12 +83,12 @@ public class DijkstraShortestPath {
             }
             else if(path.size()-1==c){
                 //System.out.print(i.getName()+"->"+v.getName()+":"+i.getDirK(v.getName())+"("+i.getNeiC(v.getName())+")"+", ");
-                System.out.print(i.getName()+"("+i.getX()+", "+i.getY()+")->"+v.getName()+"("+v.getX()+", "+v.getY()+"):"+i.getNeiC(v.getName()));
+                System.out.print(i.getName()+"("+i.getX()+", "+i.getY()+")->"+v.getName()+"("+v.getX()+", "+v.getY()+"):"+i.getNeiC(v.getName())+"("+i.getNeiD(v.getName())+")");
                 i=v;
             }
             else{
                 //System.out.print(i.getName()+"->"+v.getName()+":"+i.getDirK(v.getName())+"("+i.getNeiC(v.getName())+")"+", ");
-                System.out.print(i.getName()+"("+i.getX()+", "+i.getY()+")->"+v.getName()+"("+v.getX()+", "+v.getY()+"):"+i.getNeiC(v.getName())+"~");
+                System.out.print(i.getName()+"("+i.getX()+", "+i.getY()+")->"+v.getName()+"("+v.getX()+", "+v.getY()+"):"+i.getNeiC(v.getName())+"("+i.getNeiD(v.getName())+")"+"~");
                 i=v;
                 c++;
             }

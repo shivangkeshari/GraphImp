@@ -8,6 +8,7 @@ public class Vertex implements Comparable<Vertex> {
     private String name;
     private List<Edge> adjacenciesList;
     private Map<String,Integer> adl;
+    private Map<String,String> add;
     private boolean visited;
     private Vertex predecessor;
     private double distance = Double.MAX_VALUE;
@@ -25,6 +26,7 @@ public class Vertex implements Comparable<Vertex> {
         this.adjacenciesList = new ArrayList<>();
         //this.dir = new HashMap< String,String>();
         this.adl = new HashMap< String,Integer>();
+        this.add = new HashMap< String,String>();
     }
 
     public void addNeighbour(Edge edge) {
@@ -33,6 +35,10 @@ public class Vertex implements Comparable<Vertex> {
 
     public void addNeighbourC(String t, Integer c) {
         adl.put(t,c);
+    }
+
+    public void addNeighbourD(String t, String c) {
+        add.put(t,c);
     }
 
     /*public void addDir(String t, String d) {
@@ -45,6 +51,10 @@ public class Vertex implements Comparable<Vertex> {
 
     public Integer getNeiC(String i){
         return adl.get(i);
+    }
+
+    public String getNeiD(String i){
+        return add.get(i);
     }
 
     /*public Map<String, String> getDir() {
@@ -61,6 +71,14 @@ public class Vertex implements Comparable<Vertex> {
 
     public void setAdl(Map<String, Integer> adl) {
         this.adl = adl;
+    }
+
+    public void setAdd(Map<String, String> add) {
+        this.add = add;
+    }
+
+    public Map<String, String> getAdd() {
+        return add;
     }
 
     public String getName() {
