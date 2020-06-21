@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="950299f5-5d82-484a-bdb2-acb5079bd20a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphImp/DijkstraMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphImp/DijkstraMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DijkstraMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DijkstraMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DijkstraShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DijkstraShortestPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vertex.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
