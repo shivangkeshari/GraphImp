@@ -159,12 +159,12 @@ public class DijkstraMain {
             maze[(maze.length-1)-i]=tmp;
         }
 
-        for(i=0;i<maze.length;i++){
+        /*for(i=0;i<maze.length;i++){
             for(j=0;j<maze[i].length;j++){
                 System.out.print(maze[i][j]+",");
             }
             System.out.println();
-        }
+        }*/
 
         DijkstraShortestPath shortestPath = new DijkstraShortestPath();
 
@@ -320,8 +320,8 @@ public class DijkstraMain {
 
         }
 
-        System.out.println(adc);
-        System.out.println(add);
+//        System.out.println(adc);
+//        System.out.println(add);
 
 //        Map<String, Map<String,Integer>> adc = new HashMap<String, Map<String, Integer>>();
         /*Map<String,Integer> temp=new HashMap<String, Integer>();

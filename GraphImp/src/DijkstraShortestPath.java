@@ -1,4 +1,8 @@
 import java.util.*;
+import com.google.gson.*;
+/*import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;*/
+import com.google.gson.reflect.TypeToken;
 
 public class DijkstraShortestPath {
 
@@ -63,6 +67,7 @@ public class DijkstraShortestPath {
 
     public void getShortestPathToDir(Vertex targetVertex){
         List<Vertex> path = new ArrayList<>();
+        List<PrintPath> ppath = new ArrayList<>();
 
         for(Vertex vertex=targetVertex;vertex!=null;vertex=vertex.getPredecessor()){
             path.add(vertex);
@@ -73,32 +78,73 @@ public class DijkstraShortestPath {
         Collections.reverse(path);
         System.out.print("Direction Path: ");
         int c=0;
-        for(Vertex v:path){
 
+        //JsonArray array = new JsonArray();
+
+
+
+
+        for(Vertex v:path){
+            PrintPath pt=new PrintPath();
             if(f==0){
                 f=1;
                 i=v;
                 //System.out.print(i.getName());
                 c++;
+
             }
             else if(path.size()-1==c){
+                pt.setName(i.getName());
+                pt.setX(i.getX());
+                pt.setY(i.getY());
+                pt.setSteps(i.getNeiC(v.getName()));
+                pt.setDirection(i.getNeiD(v.getName()));
+                pt.setNp(v.getName());
+                ppath.add(pt);
                 //System.out.print(i.getName()+"->"+v.getName()+":"+i.getDirK(v.getName())+"("+i.getNeiC(v.getName())+")"+", ");
                 System.out.print(i.getName()+"("+i.getX()+", "+i.getY()+")->"+v.getName()+"("+v.getX()+", "+v.getY()+"):"+i.getNeiC(v.getName())+"("+i.getNeiD(v.getName())+")");
                 i=v;
+                pt=new PrintPath();
+                pt.setName(i.getName());
+                pt.setX(i.getX());
+                pt.setY(i.getY());
+                pt.setSteps(0);
+                pt.setDirection("");
+                pt.setNp("");
+                ppath.add(pt);
+
+                /*pt.setSteps(i.getNeiC(v.getName()));
+                pt.setDirection(i.getNeiD(v.getName()));
+                pt.setNp(v.getName());*/
             }
             else{
+                pt.setName(i.getName());
+                pt.setX(i.getX());
+                pt.setY(i.getY());
+                pt.setSteps(i.getNeiC(v.getName()));
+                pt.setDirection(i.getNeiD(v.getName()));
+                pt.setNp(v.getName());
+                ppath.add(pt);
                 //System.out.print(i.getName()+"->"+v.getName()+":"+i.getDirK(v.getName())+"("+i.getNeiC(v.getName())+")"+", ");
                 System.out.print(i.getName()+"("+i.getX()+", "+i.getY()+")->"+v.getName()+"("+v.getX()+", "+v.getY()+"):"+i.getNeiC(v.getName())+"("+i.getNeiD(v.getName())+")"+"~");
                 i=v;
                 c++;
             }
-
             //path.add(v);
 
 
 
         }
         System.out.println();
+        Gson gson = new Gson();
+        System.out.println(ppath.get(1).getName());
+        String element = gson.toJson(
+                ppath,
+                new TypeToken<ArrayList<PrintPath>>() {}.getType());
+
+        //System.out.println(ppath.get(0).getName());
+        System.out.println(element);
+
     }
 
 }
