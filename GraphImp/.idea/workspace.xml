@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="950299f5-5d82-484a-bdb2-acb5079bd20a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphImp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphImp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphImp/DijkstraMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphImp/DijkstraMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphImp/DijkstraShortestPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphImp/DijkstraShortestPath.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DijkstraMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DijkstraMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DijkstraShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DijkstraShortestPath.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +29,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gson-2.8.0.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -75,7 +78,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
